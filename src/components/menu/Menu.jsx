@@ -7,6 +7,12 @@ const Menu = () => {
         <li>
           <Link href='/'>Home</Link>
         </li>
+        <li>
+          <Link href='/'>Unir CSS a HTML</Link>
+        </li>
+        <li>
+          <Link href='/'>Box Model</Link>
+        </li>
       </ul>
     </nav>
   );
