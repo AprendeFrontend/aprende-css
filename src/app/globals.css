@@ -10,14 +10,6 @@
   }
 }
 
-body {
-  margin: 0;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -37,6 +29,30 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+body {
+  margin: 0;
+  padding-inline: 4rem 1rem;
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0vw;
+  width: 100vw;
+  height: 100vh;
+  transition: background-color 0.3s;
+  z-index: -1;
+}
+
+body.menu-open::before {
+  background-color: rgb(0 0 0/ 0.7);
 }
 
 .icon {

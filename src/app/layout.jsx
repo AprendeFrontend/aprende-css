@@ -1,4 +1,5 @@
-import { Poppins, Sriracha } from 'next/font/google';
+import Menu from '@/components/menu/Menu';
+import { Sriracha } from 'next/font/google';
 import './globals.css';
 
 export const metadata = {
@@ -7,12 +8,14 @@ export const metadata = {
 };
 
 const sriracha = Sriracha({ weight: '400', subsets: ['latin'] });
-const poppins = Poppins({ weight: '400', subsets: ['latin'] });
 
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={sriracha.className}>{children}</body>
+      <body className={sriracha.className}>
+        <Menu />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,13 +1,13 @@
 .menu-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   padding: 1rem;
   width: 50vw;
-
   background-color: #151f28;
   translate: calc(-100% + 40px);
   transition: translate 0.3s;
+  z-index: 10;
 }
 
 .menu-container-show {
@@ -24,4 +24,11 @@
 
 .menu-item {
   border-bottom: 1px solid rgb(255 255 255 /0.3);
+}
+
+.submenu {
+  padding-left: 1rem;
+  width: 100%;
+  background-color: #082137;
+  z-index: 10;
 }
