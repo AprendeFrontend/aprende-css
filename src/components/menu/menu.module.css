@@ -1,4 +1,27 @@
-.menu {
-  background-color: #151f28;
+.menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
   width: 50vw;
+
+  background-color: #151f28;
+  translate: calc(-100% + 40px);
+  transition: translate 0.3s;
+}
+
+.menu-container-show {
+  translate: 0;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  min-height: 100vh;
+}
+
+.menu-item {
+  border-bottom: 1px solid rgb(255 255 255 /0.3);
 }

@@ -1,10 +1,12 @@
 import Menu from '@/components/menu/Menu';
-
-export default function Home() {
+import styles from './page.module.css';
+const Home = () => {
   return (
-    <div>
+    <div className={styles['page']}>
       <Menu />
       <h1>Guía Interactiva De CSS</h1>
     </div>
   );
-}
+};
+
+export default Home;

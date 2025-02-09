@@ -1,20 +1,42 @@
+'use client';
 import Link from 'next/link';
+import { useState } from 'react';
+import { IoMdClose, IoMdMenu } from 'react-icons/io';
 import styles from './menu.module.css';
 const Menu = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav>
-      <ul className={styles['menu']}>
-        <li>
-          <Link href='/'>Home</Link>
-        </li>
-        <li>
-          <Link href='/'>Unir CSS a HTML</Link>
-        </li>
-        <li>
-          <Link href='/'>Box Model</Link>
-        </li>
-      </ul>
-    </nav>
+    <div className={`${styles['menu-container']} ${isOpen && styles['menu-container-show']}`}>
+      {isOpen ? (
+        <IoMdClose className='icon' onClick={() => setIsOpen(!isOpen)} />
+      ) : (
+        <IoMdMenu className='icon' onClick={() => setIsOpen(!isOpen)} />
+      )}
+      <nav>
+        <ul className={styles['menu']}>
+          <li className={styles['menu-item']}>
+            <Link href='/' className={styles['menu-link']}>
+              Home
+            </Link>
+          </li>
+          <li className={styles['menu-item']}>
+            <Link href='/' className={styles['menu-link']}>
+              Box Model
+            </Link>
+          </li>
+          <li className={styles['menu-item']}>
+            <Link href='/' className={styles['menu-link']}>
+              Home
+            </Link>
+          </li>
+          <li className={styles['menu-item']}>
+            <Link href='/' className={styles['menu-link']}>
+              Home
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
 
